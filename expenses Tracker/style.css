@@ -1,0 +1,173 @@
+ /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-top: 20px;
+} 
+
+p{
+    color: red;
+}  
+
+h3 {
+    color: green;
+}
+
+form, table, #summary, #balanceSection, #transactionHistoryBox {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input, select, textarea, button {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Balance Section */
+#balanceSection {
+    text-align: center;
+    background-color: #e7f3fe;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#balanceAmount {
+    font-size: 2em;
+    color: #007BFF;
+}
+
+/* Summary Section */
+#summary {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+#summary div {
+    flex: 1;
+    margin: 0 10px;
+    padding: 20px;
+    background-color: #e7f3fe;
+    border-radius: 5px;
+}
+
+#summary div h2 {
+    margin: 0;
+}
+
+/* Transactions Box */
+#transactionHistoryBox {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+#transactionHistoryBox h2 {
+    margin: 0 0 10px;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+    font-size: 14px; /* Adjust font size for smaller screens */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    form, table, #summary, #balanceSection, #transactionHistoryBox {
+        padding: 10px;
+    }
+
+    #summary {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #summary div {
+        margin-bottom: 10px;
+    }
+
+    th, td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box; /* Ensure full width of cells */
+    }
+
+    th {
+        background-color: #f4f4f4;
+        text-align: center;
+    }
+
+    td {
+        margin-bottom: 10px;
+        text-align: right; /* Right-align text for easier reading */
+    }
+
+    td::before {
+        content: attr(data-label); /* Add data-label for headers in smaller screens */
+        font-weight: bold;
+        display: block;
+    }
+
+    /* Adjust table layout for small screens */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+
+#about-maker {
+    background-color: #f9f9f9; /* Light background color */
+    padding: 20px;
+    text-align: center;
+}
+
+#about-maker .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#about-maker h2 {
+    font-size: 24px;
+    color: #333; /* Dark text color */
+    margin-bottom: 15px;
+}
+
+#about-maker p {
+    font-size: 16px;
+    color: #666; /* Lighter text color */
+    line-height: 1.6;
+}

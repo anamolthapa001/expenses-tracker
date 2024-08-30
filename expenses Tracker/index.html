@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="icon" href="at.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Expense Tracker</h1>
+    
+    <!-- Balance Section -->
+    <div id="balanceSection">
+        <h2>Balance</h2>
+        <p id="balanceAmount">0</p>
+    </div>
+
+    <!-- Income and Expenses Section -->
+    <div id="summary">
+        <div id="income">
+            <h2>Income</h2>
+            <h3 id="incomeAmount">0</h3>
+        </div>
+        <div id="expense">
+            <h2>Expenses</h2>
+            <p id="expenseAmount">0</p>
+        </div>
+    </div>
+
+    <!-- Currency Selection -->
+    <label for="currency">Select Currency:</label>
+    <select id="currency">
+        <option value="NPR">NPR</option>
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="JPY">JPY</option>
+        <option value="GBP">GBP</option>
+        <option value="CAD">CAD</option>
+        <option value="INR">INR</option>
+        <option value="CNY">CNY</option>
+        <option value="CHF">CHF</option>
+        <option value="ZAR">ZAR</option>
+    </select>
+    
+    <!-- Add Transaction Form -->
+    <h2>Add Transaction</h2>
+    <form id="expenseForm" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="02b36bbc-ae47-4464-baf4-b8c87b9fa6d8">
+        <input type="text" id="name" placeholder="Transaction Name" required>
+        <input type="number" id="amount" placeholder="Amount" required> <br>
+        <label for="type">Type:</label> 
+        <select id="type">
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>
+        </select>
+        <input type="date" id="date" required>
+        <select id="category">
+            <option value="Food">Food</option>
+            <option value="Education">Education</option>
+            <option value="clothes">clothes</option>
+            <option value="Travel">Travel</option>
+            <option value="Transport">Transport</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Salary">Salary</option>
+            <option value="Rent">Rent</option>
+            <option value="House">House</option>
+            <option value="Other">Other</option>
+        </select>
+        <textarea id="notes" placeholder="Notes (Optional)"></textarea>
+        <button type="submit">Add Transaction</button>
+    </form>
+    
+    <!-- Past Transactions Box -->
+    <div id="transactionHistoryBox">
+        <h2>Past Transactions</h2>
+        <table id="transactionHistory">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Name</th>
+                    <th>Amount</th>
+                    <th>Currency</th>
+                    <th>Type</th>
+                    <th>Category</th>
+                    <th>Notes</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Transactions will be added here dynamically -->
+            </tbody>
+        </table>
+    </div>
+    <section id="about-maker">
+        <div class="container">
+            <h2>About the Maker</h2>
+            <p>Hi, I'm Anamol Thapa, the creator of this project. As a dedicated student and innovator, I’m passionate about creating solutions that blend technology with practical needs. My goal is to make learning and everyday tasks more accessible and engaging through my designs and tools. Thank you for exploring my work!</p>
+        </div>
+    </section>
+    
+    <script src="currency.js"></script>
+</body>
+</html>
